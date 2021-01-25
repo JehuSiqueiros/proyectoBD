@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBitacora));
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.cmbHora = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -44,12 +43,14 @@
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.cmbID = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.panel = new System.Windows.Forms.Panel();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.panel = new System.Windows.Forms.Panel();
+            this.btnClose = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.nudHombres)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudMujeres)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudNinos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudNinas)).BeginInit();
+            this.panel.SuspendLayout();
             this.SuspendLayout();
             // 
             // monthCalendar1
@@ -184,16 +185,6 @@
             this.label7.TabIndex = 14;
             this.label7.Text = "Registrado por:";
             // 
-            // panel
-            // 
-            this.panel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel.BackgroundImage")));
-            this.panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel.Location = new System.Drawing.Point(0, 0);
-            this.panel.Name = "panel";
-            this.panel.Size = new System.Drawing.Size(585, 80);
-            this.panel.TabIndex = 15;
-            // 
             // bunifuDragControl1
             // 
             this.bunifuDragControl1.Fixed = true;
@@ -201,7 +192,32 @@
             this.bunifuDragControl1.TargetControl = this.panel;
             this.bunifuDragControl1.Vertical = true;
             // 
-            // frmBitacora
+            // panel
+            // 
+            this.panel.BackgroundImage = global::ProyectoKBI.Properties.Resources.Banner;
+            this.panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel.Controls.Add(this.btnClose);
+            this.panel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel.Location = new System.Drawing.Point(0, 0);
+            this.panel.Name = "panel";
+            this.panel.Size = new System.Drawing.Size(585, 80);
+            this.panel.TabIndex = 15;
+            // 
+            // btnClose
+            // 
+            this.btnClose.BackColor = System.Drawing.Color.Transparent;
+            this.btnClose.BackgroundImage = global::ProyectoKBI.Properties.Resources.close1;
+            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnClose.ForeColor = System.Drawing.Color.Transparent;
+            this.btnClose.Location = new System.Drawing.Point(553, 12);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(20, 20);
+            this.btnClose.TabIndex = 0;
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // frmBitacoraRegistrar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -224,13 +240,14 @@
             this.Controls.Add(this.monthCalendar1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximumSize = new System.Drawing.Size(599, 398);
-            this.Name = "frmBitacora";
+            this.Name = "frmBitacoraRegistrar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Bitácora";
             ((System.ComponentModel.ISupportInitialize)(this.nudHombres)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudMujeres)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudNinos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudNinas)).EndInit();
+            this.panel.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -254,5 +271,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel;
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
+        private System.Windows.Forms.Button btnClose;
     }
 }

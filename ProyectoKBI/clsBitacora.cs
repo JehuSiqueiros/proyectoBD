@@ -18,9 +18,6 @@ namespace ProyectoKBI
             AbrirConexion();
             comando.ExecuteNonQuery();
             CerrarConexion();
-
-
-
         }
 
     }

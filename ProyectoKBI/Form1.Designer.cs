@@ -46,6 +46,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.button1 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -80,19 +81,19 @@
             // consejoToolStripMenuItem
             // 
             this.consejoToolStripMenuItem.Name = "consejoToolStripMenuItem";
-            this.consejoToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.consejoToolStripMenuItem.Size = new System.Drawing.Size(159, 26);
             this.consejoToolStripMenuItem.Text = "Consejo";
             // 
             // staffToolStripMenuItem
             // 
             this.staffToolStripMenuItem.Name = "staffToolStripMenuItem";
-            this.staffToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.staffToolStripMenuItem.Size = new System.Drawing.Size(159, 26);
             this.staffToolStripMenuItem.Text = "Staff";
             // 
             // voluntariosToolStripMenuItem
             // 
             this.voluntariosToolStripMenuItem.Name = "voluntariosToolStripMenuItem";
-            this.voluntariosToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.voluntariosToolStripMenuItem.Size = new System.Drawing.Size(159, 26);
             this.voluntariosToolStripMenuItem.Text = "Voluntarios";
             // 
             // almacenToolStripMenuItem
@@ -151,6 +152,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(5)))), ((int)(((byte)(0)))));
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.menuStrip1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -184,6 +186,19 @@
             this.bunifuDragControl1.Horizontal = true;
             this.bunifuDragControl1.TargetControl = this.menuStrip1;
             this.bunifuDragControl1.Vertical = true;
+            // 
+            // button1
+            // 
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.DarkRed;
+            this.button1.Location = new System.Drawing.Point(748, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(63, 33);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "salir";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 
@@ -226,6 +241,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
+        private System.Windows.Forms.Button button1;
     }
 }
 

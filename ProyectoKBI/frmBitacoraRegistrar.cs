@@ -13,23 +13,11 @@ namespace ProyectoKBI
 {
     public partial class frmBitacoraRegistrar : Form
     {
+        clsBitacora querys = new clsBitacora();
         public frmBitacoraRegistrar()
         {
             InitializeComponent();
-
-            //ComboBox cmbID muestra los id de los voluntarios
-            SqlConnection conexion = new SqlConnection(@"server = DESKTOP-UFCCLJO\SQLEXTDB; database = ProyectoKBI; uid = sa; pwd = 123");
-            SqlCommand query = new SqlCommand("SELECT idVoluntario FROM Voluntarios", conexion);
-            conexion.Open();
-            SqlDataReader reader = query.ExecuteReader();
-
-            while (reader.Read() == true)
-            {
-                cmbID.Items.Add(reader["idVoluntario".ToString()]);
-            }
-            conexion.Close();
-            reader.Close();
-
+            //querys.re
 
         }
 
@@ -71,6 +59,11 @@ namespace ProyectoKBI
         private void label6_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
