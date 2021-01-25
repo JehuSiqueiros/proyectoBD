@@ -203,7 +203,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Transparent;
-            this.panel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel3.BackgroundImage")));
+            this.panel3.BackgroundImage = global::ProyectoKBI.Properties.Resources.bkgnd1;
             this.panel3.Location = new System.Drawing.Point(26, 81);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(831, 394);
