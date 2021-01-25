@@ -1,6 +1,6 @@
 ﻿namespace ProyectoKBI
 {
-    partial class frmBitacora
+    partial class frmBitacoraRegistrar
     {
         /// <summary>
         /// Required designer variable.
