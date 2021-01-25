@@ -53,19 +53,37 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmBitacora.cs">
+    <Compile Include="frmBitacoraConsultar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmBitacora.Designer.cs">
-      <DependentUpon>frmBitacora.cs</DependentUpon>
+    <Compile Include="frmBitacoraConsultar.Designer.cs">
+      <DependentUpon>frmBitacoraConsultar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBitacoraFunciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBitacoraFunciones.Designer.cs">
+      <DependentUpon>frmBitacoraFunciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBitacoraRegistrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBitacoraRegistrar.Designer.cs">
+      <DependentUpon>frmBitacoraRegistrar.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmBitacora.resx">
-      <DependentUpon>frmBitacora.cs</DependentUpon>
+    <EmbeddedResource Include="frmBitacoraConsultar.resx">
+      <DependentUpon>frmBitacoraConsultar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBitacoraFunciones.resx">
+      <DependentUpon>frmBitacoraFunciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBitacoraRegistrar.resx">
+      <DependentUpon>frmBitacoraRegistrar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

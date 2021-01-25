@@ -20,7 +20,7 @@ namespace ProyectoKBI
         private void registrarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //Abrir form para Registrar en Tabla Bitacora
-            frmBitacora frmBitacora = new frmBitacora();
+            frmBitacoraRegistrar frmBitacora = new frmBitacoraRegistrar();
             frmBitacora.Show();
         }
     }

@@ -11,9 +11,9 @@ using System.Data.SqlClient;
 
 namespace ProyectoKBI
 {
-    public partial class frmBitacora : Form
+    public partial class frmBitacoraRegistrar : Form
     {
-        public frmBitacora()
+        public frmBitacoraRegistrar()
         {
             InitializeComponent();
 
