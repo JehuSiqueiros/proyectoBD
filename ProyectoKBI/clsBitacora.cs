@@ -9,9 +9,7 @@ namespace ProyectoKBI
 {
     class clsBitacora
     {
-        //protected SqlConnection objConexion;
         string path = @"server = DESKTOP-UFCCLJO\SQLEXTDB; database = ProyectoKBI; uid = sa; pwd = 123";
-        //objConexion = new SqlConnection(path);
 
         public void Registrar(string fecha, string hora, int CantHombres, int CantMujeres, int CantNinos, int CantNinas, int RegistradoPor)
         {

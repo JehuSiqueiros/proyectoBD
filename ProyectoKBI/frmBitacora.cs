@@ -35,18 +35,17 @@ namespace ProyectoKBI
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            //    try
-            //    {
-            //        clsBitacora objBitacora = new clsBitacora();
-            //        objBitacora.Registrar(monthCalendar1.ToString(), cmbHora.SelectedItem.ToString(), Convert.ToInt32(nudHombres.Value), Convert.ToInt32(nudMujeres.Value), Convert.ToInt32(nudNinos.Value), Convert.ToInt32(nudNinas.Value), Convert.ToInt32(cmbID.SelectedItem.ToString()));
-            //        MessageBox.Show("Registrado");
-            //    }
-            //    catch (Exception err)
-            //    {
+            try
+            {
+                clsBitacora objBitacora = new clsBitacora();
+                objBitacora.Registrar(monthCalendar1.SelectionRange.Start.ToShortDateString(), cmbHora.SelectedItem.ToString(), Convert.ToInt32(nudHombres.Value), Convert.ToInt32(nudMujeres.Value), Convert.ToInt32(nudNinos.Value), Convert.ToInt32(nudNinas.Value), Convert.ToInt32(cmbID.SelectedItem.ToString()));
+                MessageBox.Show("Registrado");
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.ToString());
+            }
 
-            //        MessageBox.Show(err.ToString());
-            //    }
-          
         }
     }
 }

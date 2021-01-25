@@ -52,6 +52,7 @@
             // monthCalendar1
             // 
             this.monthCalendar1.Location = new System.Drawing.Point(34, 56);
+            this.monthCalendar1.MaxSelectionCount = 1;
             this.monthCalendar1.MinDate = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 0;
