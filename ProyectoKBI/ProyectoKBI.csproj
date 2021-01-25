@@ -122,5 +122,17 @@
   <ItemGroup>
     <None Include="Resources\close1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hide.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\closeHover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HideHover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bkgnd.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

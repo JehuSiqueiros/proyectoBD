@@ -40,13 +40,14 @@
             this.consultarAlmacenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bitacoraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.consultarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnConsultarBitacora = new System.Windows.Forms.ToolStripMenuItem();
             this.obtenerEstadísticasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnMinimized = new System.Windows.Forms.Panel();
+            this.btnClose = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
-            this.button1 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -121,9 +122,10 @@
             // bitacoraToolStripMenuItem
             // 
             this.bitacoraToolStripMenuItem.BackColor = System.Drawing.Color.Transparent;
+            this.bitacoraToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.bitacoraToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.registrarToolStripMenuItem,
-            this.consultarToolStripMenuItem,
+            this.btnConsultarBitacora,
             this.obtenerEstadísticasToolStripMenuItem});
             this.bitacoraToolStripMenuItem.ForeColor = System.Drawing.Color.Khaki;
             this.bitacoraToolStripMenuItem.Name = "bitacoraToolStripMenuItem";
@@ -137,22 +139,25 @@
             this.registrarToolStripMenuItem.Text = "Registrar";
             this.registrarToolStripMenuItem.Click += new System.EventHandler(this.registrarToolStripMenuItem_Click);
             // 
-            // consultarToolStripMenuItem
+            // btnConsultarBitacora
             // 
-            this.consultarToolStripMenuItem.Name = "consultarToolStripMenuItem";
-            this.consultarToolStripMenuItem.Size = new System.Drawing.Size(220, 26);
-            this.consultarToolStripMenuItem.Text = "Consultar";
+            this.btnConsultarBitacora.Name = "btnConsultarBitacora";
+            this.btnConsultarBitacora.Size = new System.Drawing.Size(220, 26);
+            this.btnConsultarBitacora.Text = "Consultar";
+            this.btnConsultarBitacora.Click += new System.EventHandler(this.btnConsultarBitacora_Click);
             // 
             // obtenerEstadísticasToolStripMenuItem
             // 
             this.obtenerEstadísticasToolStripMenuItem.Name = "obtenerEstadísticasToolStripMenuItem";
             this.obtenerEstadísticasToolStripMenuItem.Size = new System.Drawing.Size(220, 26);
             this.obtenerEstadísticasToolStripMenuItem.Text = "Obtener estadísticas";
+            this.obtenerEstadísticasToolStripMenuItem.Click += new System.EventHandler(this.obtenerEstadísticasToolStripMenuItem_Click);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(5)))), ((int)(((byte)(0)))));
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btnMinimized);
+            this.panel1.Controls.Add(this.btnClose);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.menuStrip1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -160,6 +165,30 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(883, 63);
             this.panel1.TabIndex = 2;
+            // 
+            // btnMinimized
+            // 
+            this.btnMinimized.BackgroundImage = global::ProyectoKBI.Properties.Resources.Hide;
+            this.btnMinimized.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnMinimized.Location = new System.Drawing.Point(786, 34);
+            this.btnMinimized.Name = "btnMinimized";
+            this.btnMinimized.Size = new System.Drawing.Size(25, 25);
+            this.btnMinimized.TabIndex = 4;
+            this.btnMinimized.Click += new System.EventHandler(this.panel5_Click);
+            this.btnMinimized.MouseLeave += new System.EventHandler(this.btnMinimized_MouseLeave);
+            this.btnMinimized.MouseHover += new System.EventHandler(this.btnClose_MouseHover);
+            // 
+            // btnClose
+            // 
+            this.btnClose.BackgroundImage = global::ProyectoKBI.Properties.Resources.close1;
+            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnClose.Location = new System.Drawing.Point(786, 3);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(25, 25);
+            this.btnClose.TabIndex = 3;
+            this.btnClose.Click += new System.EventHandler(this.panel4_Click);
+            this.btnClose.MouseLeave += new System.EventHandler(this.btnMinimized_MouseLeave);
+            this.btnClose.MouseHover += new System.EventHandler(this.btnClose_MouseHover);
             // 
             // panel2
             // 
@@ -186,19 +215,6 @@
             this.bunifuDragControl1.Horizontal = true;
             this.bunifuDragControl1.TargetControl = this.menuStrip1;
             this.bunifuDragControl1.Vertical = true;
-            // 
-            // button1
-            // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.DarkRed;
-            this.button1.Location = new System.Drawing.Point(748, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(63, 33);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "salir";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 
@@ -235,13 +251,14 @@
         private System.Windows.Forms.ToolStripMenuItem consultarAlmacenToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem bitacoraToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem registrarToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem consultarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem btnConsultarBitacora;
         private System.Windows.Forms.ToolStripMenuItem obtenerEstadísticasToolStripMenuItem;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel btnMinimized;
+        private System.Windows.Forms.Panel btnClose;
     }
 }
 

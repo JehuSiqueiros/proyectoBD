@@ -24,9 +24,55 @@ namespace ProyectoKBI
             frmBitacora.Show();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void panel4_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void panel5_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+
+        }
+
+        private void btnClose_MouseHover(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Hand;
+            Panel panel = (Panel)sender;
+            if(panel.Name == "btnClose")
+            {
+                panel.BackgroundImage = Properties.Resources.closeHover;
+            }
+            else
+            {
+                panel.BackgroundImage = Properties.Resources.HideHover;
+            }
+        }
+
+        private void btnMinimized_MouseLeave(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Default;
+            Panel panel = (Panel)sender;
+            if (panel.Name == "btnClose")
+            {
+                panel.BackgroundImage = Properties.Resources.close1;
+            }
+            else
+            {
+                panel.BackgroundImage = Properties.Resources.Hide;
+            }
+        }
+
+        private void btnConsultarBitacora_Click(object sender, EventArgs e)
+        {
+            frmBitacoraConsultar forma = new frmBitacoraConsultar();
+            forma.ShowDialog();
+        }
+
+        private void obtenerEstadísticasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmBitacoraFunciones forma = new frmBitacoraFunciones();
+            forma.ShowDialog();
         }
     }
 }
