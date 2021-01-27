@@ -19,6 +19,7 @@ namespace ProyectoKBI
             conexion.Open();
             comando = conexion.CreateCommand();
         }
+
         public void CerrarConexion()
         {
             conexion.Close();
