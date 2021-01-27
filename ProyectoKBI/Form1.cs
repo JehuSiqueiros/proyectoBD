@@ -74,5 +74,10 @@ namespace ProyectoKBI
             frmBitacoraFunciones forma = new frmBitacoraFunciones();
             forma.ShowDialog();
         }
+
+        private void registrarDonacionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

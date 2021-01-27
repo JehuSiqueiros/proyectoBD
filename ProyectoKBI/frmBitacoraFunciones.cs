@@ -12,6 +12,7 @@ namespace ProyectoKBI
 {
     public partial class frmBitacoraFunciones : Form
     {
+        clsBitacora querys = new clsBitacora();
         public frmBitacoraFunciones()
         {
             InitializeComponent();
@@ -32,6 +33,17 @@ namespace ProyectoKBI
         {
             this.Cursor = Cursors.Default;
             ((Panel)sender).BackgroundImage = Properties.Resources.close1;
+        }
+
+        private void btnGenerar_Click(object sender, EventArgs e)
+        {
+            string fechaInicio = dtpInicio.Value.ToShortDateString();
+            string fechaFin = dtpFin.Value.ToShortDateString();
+            querys.ConsultarEstadisticas(fechaInicio, fechaFin);
+            pbHombres.Value = (int)Math.Round(querys.PorcentajeHombres);
+            pbMujeres.Value = (int)Math.Round(querys.PorcentajeMujeres);
+            pbNiñas.Value = (int)Math.Round(querys.PorcentajeNiñas);
+            pbNiños.Value = (int)Math.Round(querys.PorcentajeNiños);
         }
     }
 }
