@@ -37,8 +37,8 @@ namespace ProyectoKBI
 
         private void btnGenerar_Click(object sender, EventArgs e)
         {
-            string fechaInicio = dtpInicio.Value.ToShortDateString();
-            string fechaFin = dtpFin.Value.ToShortDateString();
+            string fechaInicio = $"{dtpInicio.Value.Month}/{dtpInicio.Value.Day}/{dtpInicio.Value.Year}";
+            string fechaFin = $"{dtpFin.Value.Month}/{dtpFin.Value.Day}/{dtpFin.Value.Year}";
             querys.ConsultarEstadisticas(fechaInicio, fechaFin);
             pbHombres.Value = (int)Math.Round(querys.PorcentajeHombres);
             pbMujeres.Value = (int)Math.Round(querys.PorcentajeMujeres);
