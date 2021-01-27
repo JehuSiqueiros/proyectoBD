@@ -48,6 +48,10 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.consultarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.agregarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.eliminarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -93,8 +97,11 @@
             // 
             // voluntariosToolStripMenuItem
             // 
+            this.voluntariosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.consultarToolStripMenuItem,
+            this.editarToolStripMenuItem});
             this.voluntariosToolStripMenuItem.Name = "voluntariosToolStripMenuItem";
-            this.voluntariosToolStripMenuItem.Size = new System.Drawing.Size(159, 26);
+            this.voluntariosToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.voluntariosToolStripMenuItem.Text = "Voluntarios";
             // 
             // almacenToolStripMenuItem
@@ -112,6 +119,7 @@
             this.registrarDonacionesToolStripMenuItem.Name = "registrarDonacionesToolStripMenuItem";
             this.registrarDonacionesToolStripMenuItem.Size = new System.Drawing.Size(226, 26);
             this.registrarDonacionesToolStripMenuItem.Text = "Registrar donaciones";
+            this.registrarDonacionesToolStripMenuItem.Click += new System.EventHandler(this.registrarDonacionesToolStripMenuItem_Click);
             // 
             // consultarAlmacenToolStripMenuItem
             // 
@@ -216,6 +224,33 @@
             this.bunifuDragControl1.TargetControl = this.menuStrip1;
             this.bunifuDragControl1.Vertical = true;
             // 
+            // consultarToolStripMenuItem
+            // 
+            this.consultarToolStripMenuItem.Name = "consultarToolStripMenuItem";
+            this.consultarToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.consultarToolStripMenuItem.Text = "Consultar";
+            // 
+            // editarToolStripMenuItem
+            // 
+            this.editarToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.agregarToolStripMenuItem,
+            this.eliminarToolStripMenuItem});
+            this.editarToolStripMenuItem.Name = "editarToolStripMenuItem";
+            this.editarToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.editarToolStripMenuItem.Text = "Editar";
+            // 
+            // agregarToolStripMenuItem
+            // 
+            this.agregarToolStripMenuItem.Name = "agregarToolStripMenuItem";
+            this.agregarToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.agregarToolStripMenuItem.Text = "Agregar";
+            // 
+            // eliminarToolStripMenuItem
+            // 
+            this.eliminarToolStripMenuItem.Name = "eliminarToolStripMenuItem";
+            this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.eliminarToolStripMenuItem.Text = "Eliminar";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
@@ -259,6 +294,10 @@
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
         private System.Windows.Forms.Panel btnMinimized;
         private System.Windows.Forms.Panel btnClose;
+        private System.Windows.Forms.ToolStripMenuItem consultarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem editarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem agregarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem eliminarToolStripMenuItem;
     }
 }
 
