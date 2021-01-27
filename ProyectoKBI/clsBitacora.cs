@@ -179,8 +179,5 @@ namespace ProyectoKBI
             conexion.Close();
             return lista;
         }
-
-
-
     }
 }
