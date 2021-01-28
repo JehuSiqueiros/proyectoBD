@@ -107,5 +107,11 @@ namespace ProyectoKBI
         {
 
         }
+
+        private void modificarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmModificarInventario forma = new frmModificarInventario();
+            forma.ShowDialog();
+        }
     }
 }

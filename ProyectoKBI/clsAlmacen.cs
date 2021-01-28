@@ -16,7 +16,7 @@ namespace ProyectoKBI
             public string tipo;
             public int cantEnAlmacen;
         }
-        articulo datosArticulo;
+        public articulo datosArticulo;
 
         public int IdArticulos
         {
@@ -44,7 +44,7 @@ namespace ProyectoKBI
             inventario.Clear();
             string query = "SELECT t1.idArticulos AS Id, Nombre, t2.Descrip AS Tipo, Unidades " +
                             "FROM Articulos t1 LEFT JOIN Tipos t2 ON t1.idTipo = t2.idTipo" +
-                            " LEFT JOIN Almacen t3 ON t1.idArticulos = t3.idArticulos";
+                            " LEFT JOIN Almacen t3 ON t1.idArticulos = t3.idArticulos ORDER BY Nombre";
             AbrirConexion();
             comando.CommandText = query;
             SqlDataReader lector = comando.ExecuteReader();
@@ -58,6 +58,35 @@ namespace ProyectoKBI
             }
             CerrarConexion();
             return inventario;
+        }
+        public List<string> consultarTipos()
+        {
+            List<string> lstTipos = new List<string>();
+            AbrirConexion();
+            comando.CommandText = "SELECT Descrip FROM Tipos";
+            SqlDataReader lector = comando.ExecuteReader();
+            while (lector.Read())
+            {
+                lstTipos.Add(lector["Descrip"].ToString());
+            }
+            return lstTipos;
+        }
+        public void modificarArticulo(int id, string nombre, string tipo, int inventario)
+        {
+            string query = $"SELECT idTipo FROM Tipos WHERE Descrip = '{tipo}'";
+            AbrirConexion();
+            comando.CommandText = query;
+            SqlDataReader lector = comando.ExecuteReader();
+            lector.Read();
+            int idTipo = int.Parse(lector["idTipo"].ToString());
+            lector.Close();
+            query = $"UPDATE Articulos SET Nombre = '{nombre}', idTipo = {idTipo} WHERE idArticulos = {id}";
+            comando.CommandText = query;
+            comando.ExecuteNonQuery();
+            query = $"UPDATE Almacen SET Unidades = {inventario} WHERE idArticulos = {id}";
+            comando.CommandText = query;
+            comando.ExecuteNonQuery();
+            CerrarConexion();
         }
     }
 }
