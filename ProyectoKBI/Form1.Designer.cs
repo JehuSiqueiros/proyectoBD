@@ -89,6 +89,7 @@
             this.consejoToolStripMenuItem.Name = "consejoToolStripMenuItem";
             this.consejoToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.consejoToolStripMenuItem.Text = "Consejo";
+            this.consejoToolStripMenuItem.Click += new System.EventHandler(this.consejoToolStripMenuItem_Click);
             // 
             // staffToolStripMenuItem
             // 
@@ -108,7 +109,7 @@
             // consultarToolStripMenuItem
             // 
             this.consultarToolStripMenuItem.Name = "consultarToolStripMenuItem";
-            this.consultarToolStripMenuItem.Size = new System.Drawing.Size(147, 26);
+            this.consultarToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.consultarToolStripMenuItem.Text = "Consultar";
             // 
             // editarToolStripMenuItem
@@ -117,19 +118,19 @@
             this.agregarToolStripMenuItem,
             this.eliminarToolStripMenuItem});
             this.editarToolStripMenuItem.Name = "editarToolStripMenuItem";
-            this.editarToolStripMenuItem.Size = new System.Drawing.Size(147, 26);
+            this.editarToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.editarToolStripMenuItem.Text = "Editar";
             // 
             // agregarToolStripMenuItem
             // 
             this.agregarToolStripMenuItem.Name = "agregarToolStripMenuItem";
-            this.agregarToolStripMenuItem.Size = new System.Drawing.Size(137, 26);
+            this.agregarToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.agregarToolStripMenuItem.Text = "Agregar";
             // 
             // eliminarToolStripMenuItem
             // 
             this.eliminarToolStripMenuItem.Name = "eliminarToolStripMenuItem";
-            this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(137, 26);
+            this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.eliminarToolStripMenuItem.Text = "Eliminar";
             // 
             // almacenToolStripMenuItem

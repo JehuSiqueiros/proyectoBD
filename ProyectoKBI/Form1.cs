@@ -84,5 +84,10 @@ namespace ProyectoKBI
         {
 
         }
+
+        private void consejoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
