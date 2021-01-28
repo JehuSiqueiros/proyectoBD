@@ -58,6 +58,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmAgregarVoluntarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAgregarVoluntarios.Designer.cs">
+      <DependentUpon>frmAgregarVoluntarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmBitacoraConsultar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,10 +82,37 @@
     <Compile Include="frmBitacoraRegistrar.Designer.cs">
       <DependentUpon>frmBitacoraRegistrar.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmConsejo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsejo.Designer.cs">
+      <DependentUpon>frmConsejo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConsultarVoluntarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsultarVoluntarios.Designer.cs">
+      <DependentUpon>frmConsultarVoluntarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEliminarVoluntario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEliminarVoluntario.Designer.cs">
+      <DependentUpon>frmEliminarVoluntario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStaff.Designer.cs">
+      <DependentUpon>frmStaff.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAgregarVoluntarios.resx">
+      <DependentUpon>frmAgregarVoluntarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmBitacoraConsultar.resx">
       <DependentUpon>frmBitacoraConsultar.cs</DependentUpon>
@@ -89,6 +122,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmBitacoraRegistrar.resx">
       <DependentUpon>frmBitacoraRegistrar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConsejo.resx">
+      <DependentUpon>frmConsejo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConsultarVoluntarios.resx">
+      <DependentUpon>frmConsultarVoluntarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEliminarVoluntario.resx">
+      <DependentUpon>frmEliminarVoluntario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStaff.resx">
+      <DependentUpon>frmStaff.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
