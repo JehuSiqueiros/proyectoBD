@@ -47,6 +47,7 @@
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvVoluntarios = new System.Windows.Forms.DataGridView();
+            this.lblResult = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVoluntarios)).BeginInit();
             this.SuspendLayout();
             // 
@@ -89,10 +90,26 @@
             // cbHorario
             // 
             this.cbHorario.FormattingEnabled = true;
+            this.cbHorario.Items.AddRange(new object[] {
+            "Lunes, 07:00 - 10:00",
+            "Lunes 15:00 - 18:00",
+            "Martes, 07:00 - 10:00",
+            "Martes, 15:00 - 18:00",
+            "Miércoles, 07:00 - 10:00",
+            "Miércoles, 15:00 - 18:00",
+            "Jueves, 7:00 - 10:00",
+            "Jueves, 15:00 - 18:00",
+            "Viernes, 7:00 - 10:00",
+            "Viernes, 15:00 - 18:00",
+            "Sábado, 7:00 - 10:00",
+            "Sábado, 15:00 - 18:00",
+            "Domingo, 7:00 - 10:00",
+            "Domingo, 15:00 - 18:00"});
             this.cbHorario.Location = new System.Drawing.Point(64, 139);
             this.cbHorario.Name = "cbHorario";
             this.cbHorario.Size = new System.Drawing.Size(121, 21);
             this.cbHorario.TabIndex = 4;
+            this.cbHorario.SelectionChangeCommitted += new System.EventHandler(this.cbHorario_SelectionChangeCommitted);
             // 
             // label5
             // 
@@ -106,18 +123,21 @@
             // txtTelefono
             // 
             this.txtTelefono.Location = new System.Drawing.Point(71, 179);
+            this.txtTelefono.MaxLength = 10;
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(114, 20);
             this.txtTelefono.TabIndex = 6;
+            this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono_KeyPress);
             // 
             // btnRegistrar
             // 
-            this.btnRegistrar.Location = new System.Drawing.Point(54, 220);
+            this.btnRegistrar.Location = new System.Drawing.Point(245, 179);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(75, 23);
             this.btnRegistrar.TabIndex = 7;
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.UseVisualStyleBackColor = true;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // txtNombre
             // 
@@ -181,6 +201,12 @@
             // 
             // dgvVoluntarios
             // 
+            this.dgvVoluntarios.AllowUserToAddRows = false;
+            this.dgvVoluntarios.AllowUserToDeleteRows = false;
+            this.dgvVoluntarios.AllowUserToResizeColumns = false;
+            this.dgvVoluntarios.AllowUserToResizeRows = false;
+            this.dgvVoluntarios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvVoluntarios.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvVoluntarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvVoluntarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -191,14 +217,25 @@
             this.Column6});
             this.dgvVoluntarios.Location = new System.Drawing.Point(12, 261);
             this.dgvVoluntarios.Name = "dgvVoluntarios";
+            this.dgvVoluntarios.RowHeadersVisible = false;
             this.dgvVoluntarios.Size = new System.Drawing.Size(539, 83);
             this.dgvVoluntarios.TabIndex = 8;
+            // 
+            // lblResult
+            // 
+            this.lblResult.AutoSize = true;
+            this.lblResult.Location = new System.Drawing.Point(12, 245);
+            this.lblResult.Name = "lblResult";
+            this.lblResult.Size = new System.Drawing.Size(58, 13);
+            this.lblResult.TabIndex = 13;
+            this.lblResult.Text = "Resultado:";
             // 
             // frmAgregarVoluntarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(566, 356);
+            this.Controls.Add(this.lblResult);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtMaterno);
             this.Controls.Add(this.txtPaterno);
@@ -241,5 +278,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridView dgvVoluntarios;
+        private System.Windows.Forms.Label lblResult;
     }
 }

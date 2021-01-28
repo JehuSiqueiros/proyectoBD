@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Collections;
 
 namespace ProyectoKBI
 {
@@ -15,6 +16,53 @@ namespace ProyectoKBI
         public frmConsultarVoluntarios()
         {
             InitializeComponent();
+        }
+
+        private void frmConsultarVoluntarios_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                clsVoluntarios objVoluntarios = new clsVoluntarios();
+                ArrayList lista = objVoluntarios.ConsultarVoluntarios();
+                foreach (clsVoluntarios.dato dato in lista)
+                {
+                    dgvVoluntarios.Rows.Add(dato.idVoluntario, dato.NombreCompleto, dato.Horario, dato.Telefono);
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            //Vuelve a cargar la tabla completa
+            try
+            {
+                dgvVoluntarios.Rows.Clear();
+                clsVoluntarios objVoluntarios = new clsVoluntarios();
+                ArrayList lista = objVoluntarios.ConsultarVoluntarios();
+                foreach (clsVoluntarios.dato dato in lista)
+                {
+                    dgvVoluntarios.Rows.Add(dato.idVoluntario, dato.NombreCompleto, dato.Horario, dato.Telefono);
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        private void cbAlfabeto_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            dgvVoluntarios.Rows.Clear();
+            clsVoluntarios objVoluntarios = new clsVoluntarios();
+            ArrayList lista = objVoluntarios.ConsultarInicial(cbAlfabeto.SelectedItem.ToString());
+            foreach (clsVoluntarios.dato dato in lista)
+            {
+                dgvVoluntarios.Rows.Add(dato.idVoluntario, dato.NombreCompleto, dato.Horario, dato.Telefono);
+            }
         }
     }
 }

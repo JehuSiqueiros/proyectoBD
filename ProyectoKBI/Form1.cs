@@ -105,6 +105,39 @@ namespace ProyectoKBI
 
         private void consejoToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            frmConsejo forma = new frmConsejo();
+            forma.ShowDialog();
+        }
+
+        private void staffToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmStaff forma = new frmStaff();
+            forma.ShowDialog();
+        }
+
+        private void consultarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //Consultar tabla de voluntarios
+            frmConsultarVoluntarios forma = new frmConsultarVoluntarios();
+            forma.ShowDialog();
+        }
+
+        private void agregarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //Agregar registro en tabla Voluntarios
+            frmAgregarVoluntarios forma = new frmAgregarVoluntarios();
+            forma.ShowDialog();
+        }
+
+        private void eliminarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //Eliminar registro de la tabla voluntarios
+            frmEliminarVoluntario forma = new frmEliminarVoluntario();
+            forma.ShowDialog();
+        }
+
+        private void editarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
 
         }
 

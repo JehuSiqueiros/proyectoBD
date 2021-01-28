@@ -15,7 +15,7 @@ namespace ProyectoKBI
         {
             string dirBarbie = @"server = DESKTOP-UFCCLJO\SQLEXTDB; database = ProyectoKBI; uid = sa; pwd = 123;";
             string dirJehu = @"server = JEHUCITOPC\sqlexptbd; database = ProyectoKBI; uid=sa; pwd = 123;";
-            conexion = new SqlConnection(dirJehu);
+            conexion = new SqlConnection(dirBarbie);
             conexion.Open();
             comando = conexion.CreateCommand();
         }

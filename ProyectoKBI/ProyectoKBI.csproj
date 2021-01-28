@@ -52,6 +52,8 @@
   <ItemGroup>
     <Compile Include="clsAlmacen.cs" />
     <Compile Include="clsBitacora.cs" />
+    <Compile Include="clsConsejo.cs" />
+    <Compile Include="clsStaff.cs" />
     <Compile Include="clsVoluntarios.cs" />
     <Compile Include="Conexion.cs" />
     <Compile Include="ConsultarDonaciones.cs">
@@ -115,6 +117,39 @@
     <Compile Include="frmEliminarVoluntario.Designer.cs">
       <DependentUpon>frmEliminarVoluntario.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmRegistraDonacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRegistraDonacion.Designer.cs">
+      <DependentUpon>frmRegistraDonacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStaff.Designer.cs">
+      <DependentUpon>frmStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="frmConsejo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsejo.Designer.cs">
+      <DependentUpon>frmConsejo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConsultarVoluntarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsultarVoluntarios.Designer.cs">
+      <DependentUpon>frmConsultarVoluntarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEliminarVoluntario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEliminarVoluntario.Designer.cs">
+      <DependentUpon>frmEliminarVoluntario.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmModificarInventario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,6 +176,9 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmAgregarVoluntarios.resx">
+      <DependentUpon>frmAgregarVoluntarios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAlmacen.resx">
       <DependentUpon>frmAlmacen.cs</DependentUpon>
     </EmbeddedResource>
@@ -153,6 +191,26 @@
     <EmbeddedResource Include="frmBitacoraRegistrar.resx">
       <DependentUpon>frmBitacoraRegistrar.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmConsejo.resx">
+      <DependentUpon>frmConsejo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConsultarVoluntarios.resx">
+      <DependentUpon>frmConsultarVoluntarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEliminarVoluntario.resx">
+      <DependentUpon>frmEliminarVoluntario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRegistraDonacion.resx">
+      <DependentUpon>frmRegistraDonacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStaff.resx">
+      <DependentUpon>frmStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="obj\Debug\ProyectoKBI.Form1.resources" />
+    <EmbeddedResource Include="obj\Debug\ProyectoKBI.frmBitacoraConsultar.resources" />
+    <EmbeddedResource Include="obj\Debug\ProyectoKBI.frmBitacoraFunciones.resources" />
+    <EmbeddedResource Include="obj\Debug\ProyectoKBI.frmBitacoraRegistrar.resources" />
+    <EmbeddedResource Include="obj\Debug\ProyectoKBI.Properties.Resources.resources" />
     <EmbeddedResource Include="frmConsejo.resx">
       <DependentUpon>frmConsejo.cs</DependentUpon>
     </EmbeddedResource>
@@ -181,6 +239,14 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="bin\Debug\ProyectoKBI.exe.config" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Debug\ProyectoKBI.csproj.CopyComplete" />
+    <None Include="obj\Debug\ProyectoKBI.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Debug\ProyectoKBI.csproj.GenerateResource.cache" />
+    <None Include="obj\Debug\ProyectoKBI.csprojAssemblyReference.cache" />
+    <None Include="obj\Release\ProyectoKBI.csproj.CoreCompileInputs.cache" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -220,6 +286,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Donations.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\Bunifu_UI_v1.52.dll" />
+    <Content Include="bin\Debug\ProyectoKBI.exe" />
+    <Content Include="bin\Debug\ProyectoKBI.pdb" />
+    <Content Include="obj\Debug\ProyectoKBI.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\ProyectoKBI.exe" />
+    <Content Include="obj\Debug\ProyectoKBI.pdb" />
+    <Content Include="obj\Debug\TempPE\Properties.Resources.Designer.cs.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Release\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
