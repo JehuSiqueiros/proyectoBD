@@ -51,6 +51,12 @@
             // 
             // dgvVoluntarios
             // 
+            this.dgvVoluntarios.AllowUserToAddRows = false;
+            this.dgvVoluntarios.AllowUserToDeleteRows = false;
+            this.dgvVoluntarios.AllowUserToResizeColumns = false;
+            this.dgvVoluntarios.AllowUserToResizeRows = false;
+            this.dgvVoluntarios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvVoluntarios.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dgvVoluntarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvVoluntarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -59,6 +65,8 @@
             this.Column4});
             this.dgvVoluntarios.Location = new System.Drawing.Point(15, 76);
             this.dgvVoluntarios.Name = "dgvVoluntarios";
+            this.dgvVoluntarios.ReadOnly = true;
+            this.dgvVoluntarios.RowHeadersVisible = false;
             this.dgvVoluntarios.Size = new System.Drawing.Size(594, 256);
             this.dgvVoluntarios.TabIndex = 1;
             // 
@@ -66,21 +74,25 @@
             // 
             this.Column1.HeaderText = "ID";
             this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             // 
             // Column2
             // 
             this.Column2.HeaderText = "Nombre Completo";
             this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
             // 
             // Column3
             // 
             this.Column3.HeaderText = "Horario";
             this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
             // 
             // Column4
             // 
             this.Column4.HeaderText = "Teléfono";
             this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
             // 
             // cbAlfabeto
             // 
@@ -115,6 +127,7 @@
             this.cbAlfabeto.Name = "cbAlfabeto";
             this.cbAlfabeto.Size = new System.Drawing.Size(56, 21);
             this.cbAlfabeto.TabIndex = 2;
+            this.cbAlfabeto.SelectionChangeCommitted += new System.EventHandler(this.cbAlfabeto_SelectionChangeCommitted);
             // 
             // label2
             // 
@@ -133,6 +146,7 @@
             this.btnRefresh.TabIndex = 4;
             this.btnRefresh.Text = "Refresh";
             this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // frmConsultarVoluntarios
             // 
@@ -146,6 +160,7 @@
             this.Controls.Add(this.label1);
             this.Name = "frmConsultarVoluntarios";
             this.Text = "frmConsultarVoluntarios";
+            this.Load += new System.EventHandler(this.frmConsultarVoluntarios_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvVoluntarios)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

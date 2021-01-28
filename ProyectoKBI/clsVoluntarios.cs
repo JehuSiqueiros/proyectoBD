@@ -78,13 +78,10 @@ namespace ProyectoKBI
             {
                 //ID, NombreCompleto, Horario, Telefono
                 IdVoluntario = Convert.ToInt32(objLectura["idVoluntario"].ToString());
-                //nombres = objLectura["Nombres"].ToString();
-                //apellidoP = objLectura["ApellidoP"].ToString();
-                //apellidoM = objLectura["ApellidoM"].ToString();
                 nombreCompleto = objLectura["Nombre Completo"].ToString();
                 horario = objLectura["Horario"].ToString();
-                //IdHorario = Convert.ToInt32(objLectura["Horario"].ToString());
                 telefono = objLectura["Telefono"].ToString();
+
                 lista.Add(datos);
             }
             conexion.Close();
@@ -101,12 +98,8 @@ namespace ProyectoKBI
             {
                 //ID, NombreCompleto, Horario, Telefono
                 IdVoluntario = Convert.ToInt32(objLectura["idVoluntario"].ToString());
-                //nombres = objLectura["Nombres"].ToString();
-                //apellidoP = objLectura["ApellidoP"].ToString();
-                //apellidoM = objLectura["ApellidoM"].ToString();
                 nombreCompleto = objLectura["Nombre Completo"].ToString();
                 horario = objLectura["Horario"].ToString();
-                //IdHorario = Convert.ToInt32(objLectura["Horario"].ToString());
                 telefono = objLectura["Telefono"].ToString();
                 lista.Add(datos);
             }
@@ -114,16 +107,6 @@ namespace ProyectoKBI
             return lista;
         }
 
-
-        //public void Registrar(string fecha, string hora, int CantHombres, int CantMujeres, int CantNinos, int CantNinas, int RegistradoPor)
-        //{
-        //    string registro = $"INSERT INTO Bitacora(Fecha, Hora,CantHombres,CantMujeres,CantNinos,CantNinas,RegistradoPor) VALUES('{fecha}','{hora}',{CantHombres},{CantMujeres},{CantNinos},{CantNinas},{RegistradoPor});";
-
-        //    AbrirConexion();
-        //    comando.CommandText = registro;
-        //    comando.ExecuteNonQuery();
-        //    CerrarConexion();
-        //}
 
         public void Registrar(string nombre, string apeP, string apeM, int idHora, string numTelefono)
         {
@@ -143,10 +126,12 @@ namespace ProyectoKBI
             CerrarConexion();
         }
 
-        public ArrayList ConsultarVoluntariosTODO()
+
+        //Metodo para consultar todos los campos de voluntarios
+        public ArrayList ConsultarVoluntariosTODO(string apeP, string apeM)
         {
             AbrirConexion();
-            comando.CommandText = $"SELECT * FROM Voluntarios";
+            comando.CommandText = $"SELECT * FROM Voluntarios WHERE ApellidoP = '{apeP}' AND ApellidoM = '{apeM}'";
             SqlDataReader objLectura = comando.ExecuteReader();
 
             while (objLectura.Read())
@@ -155,7 +140,7 @@ namespace ProyectoKBI
                 nombres = objLectura["Nombres"].ToString();
                 apellidoP = objLectura["ApellidoP"].ToString();
                 apellidoM = objLectura["ApellidoM"].ToString();
-                IdHorario = Convert.ToInt32(objLectura["Horario"].ToString());
+                IdHorario = Convert.ToInt32(objLectura["idHorario"].ToString());
                 telefono = objLectura["Telefono"].ToString();
                 lista.Add(datos);
             }
@@ -163,7 +148,40 @@ namespace ProyectoKBI
             return lista;
         }
 
+        //Metodo para consultar por ID
+        public ArrayList ConsultarPorID(int id)
+        {
+            AbrirConexion();
+            comando.CommandText = $"SELECT * FROM Voluntarios WHERE idVoluntario = " + id;
+            SqlDataReader objLectura = comando.ExecuteReader();
 
+            while (objLectura.Read())
+            {
+                IdVoluntario = Convert.ToInt32(objLectura["idVoluntario"].ToString());
+                nombres = objLectura["Nombres"].ToString();
+                apellidoP = objLectura["ApellidoP"].ToString();
+                apellidoM = objLectura["ApellidoM"].ToString();
+                IdHorario = Convert.ToInt32(objLectura["idHorario"].ToString());
+                telefono = objLectura["Telefono"].ToString();
+                lista.Add(datos);
+            }
+            conexion.Close();
+            return lista;
+        }
+
+        public ArrayList listaIDs()
+        {
+            AbrirConexion();
+            comando.CommandText = $"SELECT idVoluntario FROM Voluntarios";
+            SqlDataReader objLectura = comando.ExecuteReader();
+            while (objLectura.Read())
+            {
+                IdVoluntario = Convert.ToInt32(objLectura["idVoluntario"].ToString());
+                lista.Add(datos);
+            }
+            conexion.Close();
+            return lista;
+        }
 
 
     }

@@ -48,6 +48,11 @@
             // 
             // dgvConsejo
             // 
+            this.dgvConsejo.AllowUserToAddRows = false;
+            this.dgvConsejo.AllowUserToDeleteRows = false;
+            this.dgvConsejo.AllowUserToResizeRows = false;
+            this.dgvConsejo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvConsejo.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvConsejo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvConsejo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -56,6 +61,8 @@
             this.Column4});
             this.dgvConsejo.Location = new System.Drawing.Point(16, 47);
             this.dgvConsejo.Name = "dgvConsejo";
+            this.dgvConsejo.ReadOnly = true;
+            this.dgvConsejo.RowHeadersVisible = false;
             this.dgvConsejo.Size = new System.Drawing.Size(535, 317);
             this.dgvConsejo.TabIndex = 1;
             // 
@@ -63,21 +70,25 @@
             // 
             this.Column1.HeaderText = "Nombre";
             this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             // 
             // Column2
             // 
             this.Column2.HeaderText = "Posición";
             this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
             // 
             // Column3
             // 
             this.Column3.HeaderText = "Ocupación";
             this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
             // 
             // Column4
             // 
             this.Column4.HeaderText = "Residencia";
             this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
             // 
             // frmConsejo
             // 
@@ -88,6 +99,7 @@
             this.Controls.Add(this.label1);
             this.Name = "frmConsejo";
             this.Text = "frmConsejo";
+            this.Load += new System.EventHandler(this.frmConsejo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsejo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

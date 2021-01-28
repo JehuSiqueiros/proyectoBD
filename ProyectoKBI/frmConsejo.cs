@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Collections;
 
 namespace ProyectoKBI
 {
@@ -15,6 +16,26 @@ namespace ProyectoKBI
         public frmConsejo()
         {
             InitializeComponent();
+        }
+
+        private void frmConsejo_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                clsConsejo objConsejo = new clsConsejo();
+                ArrayList lista = objConsejo.ConsultarConsejo();
+
+                foreach (clsConsejo.dato dato in lista)
+                {
+                    dgvConsejo.Rows.Add(dato.Nombre, dato.Posicion, dato.Ocupacion, dato.Residencia);
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
+
         }
     }
 }
