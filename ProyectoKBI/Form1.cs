@@ -102,5 +102,10 @@ namespace ProyectoKBI
             frmRegistraDonacion forma = new frmRegistraDonacion();
             forma.ShowDialog();
         }
+
+        private void consejoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
