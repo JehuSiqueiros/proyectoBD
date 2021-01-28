@@ -50,13 +50,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="clsAlmacen.cs" />
     <Compile Include="clsBitacora.cs" />
     <Compile Include="Conexion.cs" />
+    <Compile Include="ConsultarDonaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultarDonaciones.Designer.cs">
+      <DependentUpon>ConsultarDonaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Donaciones.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAlmacen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAlmacen.Designer.cs">
+      <DependentUpon>frmAlmacen.cs</DependentUpon>
     </Compile>
     <Compile Include="frmBitacoraConsultar.cs">
       <SubType>Form</SubType>
@@ -76,10 +90,22 @@
     <Compile Include="frmBitacoraRegistrar.Designer.cs">
       <DependentUpon>frmBitacoraRegistrar.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmRegistraDonacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRegistraDonacion.Designer.cs">
+      <DependentUpon>frmRegistraDonacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ConsultarDonaciones.resx">
+      <DependentUpon>ConsultarDonaciones.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAlmacen.resx">
+      <DependentUpon>frmAlmacen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmBitacoraConsultar.resx">
       <DependentUpon>frmBitacoraConsultar.cs</DependentUpon>
@@ -89,6 +115,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmBitacoraRegistrar.resx">
       <DependentUpon>frmBitacoraRegistrar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRegistraDonacion.resx">
+      <DependentUpon>frmRegistraDonacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -136,6 +165,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\bkgnd1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Donations.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

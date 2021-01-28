@@ -84,5 +84,23 @@ namespace ProyectoKBI
         {
 
         }
+
+        private void consultarToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            frmAlmacen forma = new frmAlmacen();
+            forma.ShowDialog();
+        }
+
+        private void consultarToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            ConsultarDonaciones forma = new ConsultarDonaciones();
+            forma.ShowDialog();
+        }
+
+        private void registrarToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmRegistraDonacion forma = new frmRegistraDonacion();
+            forma.ShowDialog();
+        }
     }
 }

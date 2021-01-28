@@ -114,5 +114,10 @@ namespace ProyectoKBI
 
 
         }
+
+        private void dtpFecha_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
