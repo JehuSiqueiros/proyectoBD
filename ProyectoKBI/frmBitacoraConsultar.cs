@@ -47,7 +47,7 @@ namespace ProyectoKBI
             dgvDatos.Rows.Clear();
             dgvDatos.ColumnHeadersVisible = true;
             clsBitacora objBitacora = new clsBitacora();
-            string fecha = dtpFecha.Value.ToShortDateString();
+            string fecha = $"{dtpFecha.Value.Month}/{dtpFecha.Value.Day}/{dtpFecha.Value.Year}";
             
             ArrayList lista = objBitacora.ConsultarBitacora(fecha);
             foreach (clsBitacora.dato dato in lista)

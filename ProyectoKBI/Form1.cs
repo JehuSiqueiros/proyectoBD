@@ -79,5 +79,10 @@ namespace ProyectoKBI
         {
 
         }
+
+        private void equipoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
