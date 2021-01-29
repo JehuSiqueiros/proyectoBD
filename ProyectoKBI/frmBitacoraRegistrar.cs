@@ -14,11 +14,11 @@ namespace ProyectoKBI
     public partial class frmBitacoraRegistrar : Form
     {
         clsBitacora querys = new clsBitacora();
+        clsVoluntarios voluntarios = new clsVoluntarios();
+        clsVoluntarios.dato registradoPor;
         public frmBitacoraRegistrar()
         {
             InitializeComponent();
-            //querys.re
-
         }
 
         private void btnRegistrar_Click(object sender, EventArgs e)
@@ -26,7 +26,8 @@ namespace ProyectoKBI
             try
             {
                 clsBitacora objBitacora = new clsBitacora();
-                objBitacora.Registrar(monthCalendar1.SelectionRange.Start.ToShortDateString(), cmbHora.SelectedItem.ToString(), Convert.ToInt32(nudHombres.Value), Convert.ToInt32(nudMujeres.Value), Convert.ToInt32(nudNinos.Value), Convert.ToInt32(nudNinas.Value), Convert.ToInt32(cmbID.SelectedItem.ToString()));
+                objBitacora.Registrar(monthCalendar1.SelectionRange.Start.ToShortDateString(), cmbHora.SelectedItem.ToString(), Convert.ToInt32(nudHombres.Value), Convert.ToInt32(nudMujeres.Value), Convert.ToInt32(nudNinos.Value), Convert.ToInt32(nudNinas.Value), registradoPor.idVoluntario);
+
                 MessageBox.Show("Registrado");
             }
             catch (Exception err)
@@ -74,6 +75,19 @@ namespace ProyectoKBI
         private void btnClose_MouseLeave(object sender, EventArgs e)
         {
             ((Panel)sender).BackgroundImage = Properties.Resources.close1;
+        }
+
+        private void frmBitacoraRegistrar_Load(object sender, EventArgs e)
+        {
+            foreach (var voluntario in voluntarios.ConsultarVoluntarios())
+            {
+                cmbID.Items.Add(voluntario.NombreCompleto);
+            }
+        }
+
+        private void cmbID_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            registradoPor = voluntarios.lista[cmbID.SelectedIndex];
         }
     }
 }

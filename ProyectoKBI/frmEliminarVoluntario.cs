@@ -19,7 +19,7 @@ namespace ProyectoKBI
         {
             InitializeComponent();
             clsVoluntarios objVoluntarios = new clsVoluntarios();
-            ArrayList lista = objVoluntarios.listaIDs();
+            var lista = objVoluntarios.listaIDs();
             foreach (clsVoluntarios.dato dato in lista)
             {
                 cbIDvoluntarios.Items.Add(dato.idVoluntario.ToString());

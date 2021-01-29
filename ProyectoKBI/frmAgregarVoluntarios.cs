@@ -34,7 +34,7 @@ namespace ProyectoKBI
                 {
                     clsVoluntarios objVoluntarios = new clsVoluntarios();
                     objVoluntarios.Registrar(txtNombre.Text, txtPaterno.Text, txtMaterno.Text, idHora, txtTelefono.Text);
-                    ArrayList lista = objVoluntarios.ConsultarVoluntariosTODO(txtPaterno.Text, txtMaterno.Text);
+                    var lista = objVoluntarios.ConsultarVoluntariosTODO(txtPaterno.Text, txtMaterno.Text);
                     foreach (clsVoluntarios.dato dato in lista)
                     {
                         dgvVoluntarios.Rows.Add(dato.idVoluntario, dato.Nombres, dato.ApellidoP, dato.ApellidoM, dato.idHorario, dato.Telefono);

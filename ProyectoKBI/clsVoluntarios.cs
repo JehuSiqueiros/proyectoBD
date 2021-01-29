@@ -66,9 +66,9 @@ namespace ProyectoKBI
             set { datos.Horario = value; }
         }
 
-        ArrayList lista = new ArrayList();
+        public List<dato> lista = new List<dato>();
 
-        public ArrayList ConsultarVoluntarios()
+        public List<dato> ConsultarVoluntarios()
         {
             AbrirConexion();
             comando.CommandText = $"SELECT idVoluntario, Nombres + ' ' + ApellidoP + ' ' + ApellidoM as 'Nombre Completo', Dia + ', '+HoraEntrada+'-'+HoraSalida as Horario, Telefono  FROM Voluntarios INNER JOIN Horario ON Voluntarios.idHorario = Horario.idHorario";
@@ -88,7 +88,7 @@ namespace ProyectoKBI
             return lista;
         }
 
-        public ArrayList ConsultarInicial(string inicial)
+        public List<dato> ConsultarInicial(string inicial)
         {
             AbrirConexion();
             comando.CommandText = $"SELECT idVoluntario, Nombres + ' ' + ApellidoP + ' ' + ApellidoM as 'Nombre Completo', Dia + ', '+HoraEntrada+'-'+HoraSalida as Horario, Telefono  FROM Voluntarios INNER JOIN Horario ON Voluntarios.idHorario = Horario.idHorario WHERE Nombres LIKE '"+inicial+"%'";
@@ -128,7 +128,7 @@ namespace ProyectoKBI
 
 
         //Metodo para consultar todos los campos de voluntarios
-        public ArrayList ConsultarVoluntariosTODO(string apeP, string apeM)
+        public List<dato> ConsultarVoluntariosTODO(string apeP, string apeM)
         {
             AbrirConexion();
             comando.CommandText = $"SELECT * FROM Voluntarios WHERE ApellidoP = '{apeP}' AND ApellidoM = '{apeM}'";
@@ -168,7 +168,7 @@ namespace ProyectoKBI
             return datos;
         }
 
-        public ArrayList listaIDs()
+        public List<dato> listaIDs()
         {
             AbrirConexion();
             comando.CommandText = $"SELECT idVoluntario FROM Voluntarios";

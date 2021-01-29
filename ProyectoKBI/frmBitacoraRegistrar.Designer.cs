@@ -170,11 +170,13 @@
             // 
             // cmbID
             // 
+            this.cmbID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbID.FormattingEnabled = true;
             this.cmbID.Location = new System.Drawing.Point(372, 233);
             this.cmbID.Name = "cmbID";
             this.cmbID.Size = new System.Drawing.Size(174, 21);
             this.cmbID.TabIndex = 13;
+            this.cmbID.SelectedIndexChanged += new System.EventHandler(this.cmbID_SelectedIndexChanged);
             // 
             // label7
             // 
@@ -243,6 +245,7 @@
             this.Name = "frmBitacoraRegistrar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bitácora";
+            this.Load += new System.EventHandler(this.frmBitacoraRegistrar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nudHombres)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudMujeres)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudNinos)).EndInit();

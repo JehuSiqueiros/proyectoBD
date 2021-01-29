@@ -23,7 +23,7 @@ namespace ProyectoKBI
             try
             {
                 clsVoluntarios objVoluntarios = new clsVoluntarios();
-                ArrayList lista = objVoluntarios.ConsultarVoluntarios();
+                var lista = objVoluntarios.ConsultarVoluntarios();
                 foreach (clsVoluntarios.dato dato in lista)
                 {
                     dgvVoluntarios.Rows.Add(dato.idVoluntario, dato.NombreCompleto, dato.Horario, dato.Telefono);
@@ -42,7 +42,7 @@ namespace ProyectoKBI
             {
                 dgvVoluntarios.Rows.Clear();
                 clsVoluntarios objVoluntarios = new clsVoluntarios();
-                ArrayList lista = objVoluntarios.ConsultarVoluntarios();
+                var lista = objVoluntarios.ConsultarVoluntarios();
                 foreach (clsVoluntarios.dato dato in lista)
                 {
                     dgvVoluntarios.Rows.Add(dato.idVoluntario, dato.NombreCompleto, dato.Horario, dato.Telefono);
@@ -58,7 +58,7 @@ namespace ProyectoKBI
         {
             dgvVoluntarios.Rows.Clear();
             clsVoluntarios objVoluntarios = new clsVoluntarios();
-            ArrayList lista = objVoluntarios.ConsultarInicial(cbAlfabeto.SelectedItem.ToString());
+            var lista = objVoluntarios.ConsultarInicial(cbAlfabeto.SelectedItem.ToString());
             foreach (clsVoluntarios.dato dato in lista)
             {
                 dgvVoluntarios.Rows.Add(dato.idVoluntario, dato.NombreCompleto, dato.Horario, dato.Telefono);
