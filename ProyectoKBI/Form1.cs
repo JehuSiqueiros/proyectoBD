@@ -12,6 +12,7 @@ namespace ProyectoKBI
 {
     public partial class Form1 : Form
     {
+        //Ete sech
         public Form1()
         {
             InitializeComponent();
@@ -145,6 +146,11 @@ namespace ProyectoKBI
         {
             frmModificarInventario forma = new frmModificarInventario();
             forma.ShowDialog();
+        }
+
+        private void btnClose_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
