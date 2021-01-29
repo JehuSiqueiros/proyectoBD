@@ -149,7 +149,7 @@ namespace ProyectoKBI
         }
 
         //Metodo para consultar por ID
-        public ArrayList ConsultarPorID(int id)
+        public dato ConsultarPorID(int id)
         {
             AbrirConexion();
             comando.CommandText = $"SELECT * FROM Voluntarios WHERE idVoluntario = " + id;
@@ -163,10 +163,9 @@ namespace ProyectoKBI
                 apellidoM = objLectura["ApellidoM"].ToString();
                 IdHorario = Convert.ToInt32(objLectura["idHorario"].ToString());
                 telefono = objLectura["Telefono"].ToString();
-                lista.Add(datos);
             }
             conexion.Close();
-            return lista;
+            return datos;
         }
 
         public ArrayList listaIDs()

@@ -51,7 +51,7 @@ namespace ProyectoKBI
         public ArrayList ConsultarStaff()
         {
             AbrirConexion();
-            comando.CommandText = $"SELECT IdMiembroEquipo,Nombre + ' ' + ApellidoPaterno + ' ' + ApellidoMaterno as Nombre, Puesto FROM Staff ORDER BY Nombre ASC;";
+            comando.CommandText = $"SELECT IdMiembroEquipo,ISNULL(Nombre,'') + ' ' + ISNULL(ApellidoPaterno,'') + ' ' + ISNULL(ApellidoMaterno,'') as Nombre, Puesto FROM Staff ORDER BY Nombre ASC;";
             SqlDataReader objLectura = comando.ExecuteReader();
 
             while (objLectura.Read())

@@ -28,18 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmModificarInventario));
             this.panel = new System.Windows.Forms.Panel();
             this.btnClose = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.cbArticulo = new Bunifu.Framework.UI.BunifuDropdown();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtNombre = new Bunifu.Framework.UI.BunifuMetroTextbox();
-            this.txtInventario = new Bunifu.Framework.UI.BunifuMetroTextbox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.btnModificar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.cbTipo = new System.Windows.Forms.ComboBox();
+            this.btnModificar = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtInventario = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.txtNombre = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cbArticulo = new Bunifu.Framework.UI.BunifuDropdown();
+            this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.panel.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -84,82 +86,14 @@
             this.panel1.Size = new System.Drawing.Size(478, 420);
             this.panel1.TabIndex = 19;
             // 
-            // cbArticulo
+            // cbTipo
             // 
-            this.cbArticulo.BackColor = System.Drawing.Color.Transparent;
-            this.cbArticulo.BorderRadius = 3;
-            this.cbArticulo.ForeColor = System.Drawing.Color.Khaki;
-            this.cbArticulo.Items = new string[0];
-            this.cbArticulo.Location = new System.Drawing.Point(24, 19);
-            this.cbArticulo.Name = "cbArticulo";
-            this.cbArticulo.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(23)))), ((int)(((byte)(0)))));
-            this.cbArticulo.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(43)))), ((int)(((byte)(0)))));
-            this.cbArticulo.selectedIndex = -1;
-            this.cbArticulo.Size = new System.Drawing.Size(431, 44);
-            this.cbArticulo.TabIndex = 0;
-            this.cbArticulo.onItemSelected += new System.EventHandler(this.cbArticulo_onItemSelected);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(28, 86);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Nombre";
-            // 
-            // txtNombre
-            // 
-            this.txtNombre.BorderColorFocused = System.Drawing.Color.Khaki;
-            this.txtNombre.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(26)))), ((int)(((byte)(0)))));
-            this.txtNombre.BorderColorMouseHover = System.Drawing.Color.Khaki;
-            this.txtNombre.BorderThickness = 3;
-            this.txtNombre.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtNombre.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txtNombre.ForeColor = System.Drawing.Color.Khaki;
-            this.txtNombre.isPassword = false;
-            this.txtNombre.Location = new System.Drawing.Point(24, 103);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(431, 44);
-            this.txtNombre.TabIndex = 2;
-            this.txtNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // txtInventario
-            // 
-            this.txtInventario.BorderColorFocused = System.Drawing.Color.Khaki;
-            this.txtInventario.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(26)))), ((int)(((byte)(0)))));
-            this.txtInventario.BorderColorMouseHover = System.Drawing.Color.Khaki;
-            this.txtInventario.BorderThickness = 3;
-            this.txtInventario.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtInventario.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txtInventario.ForeColor = System.Drawing.Color.Khaki;
-            this.txtInventario.isPassword = false;
-            this.txtInventario.Location = new System.Drawing.Point(24, 182);
-            this.txtInventario.Margin = new System.Windows.Forms.Padding(4);
-            this.txtInventario.Name = "txtInventario";
-            this.txtInventario.Size = new System.Drawing.Size(431, 44);
-            this.txtInventario.TabIndex = 3;
-            this.txtInventario.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtInventario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtInventario_KeyPress);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(28, 169);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(54, 13);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Inventario";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(28, 248);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(28, 13);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Tipo";
+            this.cbTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbTipo.FormattingEnabled = true;
+            this.cbTipo.Location = new System.Drawing.Point(24, 264);
+            this.cbTipo.Name = "cbTipo";
+            this.cbTipo.Size = new System.Drawing.Size(431, 21);
+            this.cbTipo.TabIndex = 8;
             // 
             // btnModificar
             // 
@@ -196,14 +130,89 @@
             this.btnModificar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click_1);
             // 
-            // cbTipo
+            // label3
             // 
-            this.cbTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbTipo.FormattingEnabled = true;
-            this.cbTipo.Location = new System.Drawing.Point(24, 264);
-            this.cbTipo.Name = "cbTipo";
-            this.cbTipo.Size = new System.Drawing.Size(431, 21);
-            this.cbTipo.TabIndex = 8;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(28, 248);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(28, 13);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Tipo";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(28, 169);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(54, 13);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Inventario";
+            // 
+            // txtInventario
+            // 
+            this.txtInventario.BorderColorFocused = System.Drawing.Color.Khaki;
+            this.txtInventario.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(26)))), ((int)(((byte)(0)))));
+            this.txtInventario.BorderColorMouseHover = System.Drawing.Color.Khaki;
+            this.txtInventario.BorderThickness = 3;
+            this.txtInventario.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtInventario.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtInventario.ForeColor = System.Drawing.Color.Khaki;
+            this.txtInventario.isPassword = false;
+            this.txtInventario.Location = new System.Drawing.Point(24, 182);
+            this.txtInventario.Margin = new System.Windows.Forms.Padding(4);
+            this.txtInventario.Name = "txtInventario";
+            this.txtInventario.Size = new System.Drawing.Size(431, 44);
+            this.txtInventario.TabIndex = 3;
+            this.txtInventario.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtInventario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtInventario_KeyPress);
+            // 
+            // txtNombre
+            // 
+            this.txtNombre.BorderColorFocused = System.Drawing.Color.Khaki;
+            this.txtNombre.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(26)))), ((int)(((byte)(0)))));
+            this.txtNombre.BorderColorMouseHover = System.Drawing.Color.Khaki;
+            this.txtNombre.BorderThickness = 3;
+            this.txtNombre.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtNombre.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtNombre.ForeColor = System.Drawing.Color.Khaki;
+            this.txtNombre.isPassword = false;
+            this.txtNombre.Location = new System.Drawing.Point(24, 103);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(431, 44);
+            this.txtNombre.TabIndex = 2;
+            this.txtNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(28, 86);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(44, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Nombre";
+            // 
+            // cbArticulo
+            // 
+            this.cbArticulo.BackColor = System.Drawing.Color.Transparent;
+            this.cbArticulo.BorderRadius = 3;
+            this.cbArticulo.ForeColor = System.Drawing.Color.Khaki;
+            this.cbArticulo.Items = new string[0];
+            this.cbArticulo.Location = new System.Drawing.Point(24, 19);
+            this.cbArticulo.Name = "cbArticulo";
+            this.cbArticulo.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(23)))), ((int)(((byte)(0)))));
+            this.cbArticulo.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(43)))), ((int)(((byte)(0)))));
+            this.cbArticulo.selectedIndex = -1;
+            this.cbArticulo.Size = new System.Drawing.Size(431, 44);
+            this.cbArticulo.TabIndex = 0;
+            this.cbArticulo.onItemSelected += new System.EventHandler(this.cbArticulo_onItemSelected);
+            // 
+            // bunifuDragControl1
+            // 
+            this.bunifuDragControl1.Fixed = true;
+            this.bunifuDragControl1.Horizontal = true;
+            this.bunifuDragControl1.TargetControl = this.panel;
+            this.bunifuDragControl1.Vertical = true;
             // 
             // frmModificarInventario
             // 
@@ -216,6 +225,7 @@
             this.ForeColor = System.Drawing.Color.Khaki;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmModificarInventario";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmModificarInventario";
             this.Load += new System.EventHandler(this.frmModificarInventario_Load);
             this.panel.ResumeLayout(false);
@@ -238,5 +248,6 @@
         private Bunifu.Framework.UI.BunifuMetroTextbox txtNombre;
         private Bunifu.Framework.UI.BunifuFlatButton btnModificar;
         private System.Windows.Forms.ComboBox cbTipo;
+        private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
     }
 }

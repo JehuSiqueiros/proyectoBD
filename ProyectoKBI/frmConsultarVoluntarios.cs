@@ -64,5 +64,27 @@ namespace ProyectoKBI
                 dgvVoluntarios.Rows.Add(dato.idVoluntario, dato.NombreCompleto, dato.Horario, dato.Telefono);
             }
         }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnClose_MouseLeave(object sender, EventArgs e)
+        {
+            Cursor = Cursors.Default;
+            btnClose.BackgroundImage = Properties.Resources.close1;
+        }
+
+        private void btnClose_MouseHover(object sender, EventArgs e)
+        {
+            Cursor = Cursors.Hand;
+            btnClose.BackgroundImage = Properties.Resources.closeHover;
+        }
+
+        private void btnClose_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

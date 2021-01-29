@@ -295,6 +295,7 @@
             this.ForeColor = System.Drawing.Color.Khaki;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmBitacoraFunciones";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmBitacoraFunciones";
             this.panel.ResumeLayout(false);
             this.ResumeLayout(false);

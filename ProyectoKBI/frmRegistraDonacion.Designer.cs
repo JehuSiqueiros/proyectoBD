@@ -183,6 +183,7 @@
             this.Controls.Add(this.panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmRegistraDonacion";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmRegistraDonacion";
             this.panel.ResumeLayout(false);
             this.ResumeLayout(false);

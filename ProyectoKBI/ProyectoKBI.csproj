@@ -132,41 +132,11 @@
     <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
-    <Compile Include="frmConsejo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmConsejo.Designer.cs">
-      <DependentUpon>frmConsejo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmConsultarVoluntarios.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmConsultarVoluntarios.Designer.cs">
-      <DependentUpon>frmConsultarVoluntarios.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmEliminarVoluntario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmEliminarVoluntario.Designer.cs">
-      <DependentUpon>frmEliminarVoluntario.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmModificarInventario.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmModificarInventario.Designer.cs">
       <DependentUpon>frmModificarInventario.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmRegistraDonacion.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmRegistraDonacion.Designer.cs">
-      <DependentUpon>frmRegistraDonacion.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmStaff.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmStaff.Designer.cs">
-      <DependentUpon>frmStaff.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -211,23 +181,8 @@
     <EmbeddedResource Include="obj\Debug\ProyectoKBI.frmBitacoraFunciones.resources" />
     <EmbeddedResource Include="obj\Debug\ProyectoKBI.frmBitacoraRegistrar.resources" />
     <EmbeddedResource Include="obj\Debug\ProyectoKBI.Properties.Resources.resources" />
-    <EmbeddedResource Include="frmConsejo.resx">
-      <DependentUpon>frmConsejo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmConsultarVoluntarios.resx">
-      <DependentUpon>frmConsultarVoluntarios.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmEliminarVoluntario.resx">
-      <DependentUpon>frmEliminarVoluntario.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmModificarInventario.resx">
       <DependentUpon>frmModificarInventario.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmRegistraDonacion.resx">
-      <DependentUpon>frmRegistraDonacion.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmStaff.resx">
-      <DependentUpon>frmStaff.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

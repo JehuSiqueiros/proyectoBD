@@ -79,6 +79,7 @@
             this.cbDonacion.ForeColor = System.Drawing.Color.Khaki;
             this.cbDonacion.Items = new string[0];
             this.cbDonacion.Location = new System.Drawing.Point(25, 100);
+            this.cbDonacion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbDonacion.Name = "cbDonacion";
             this.cbDonacion.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(26)))), ((int)(((byte)(0)))));
             this.cbDonacion.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(16)))), ((int)(((byte)(0)))));
@@ -218,6 +219,7 @@
             this.ForeColor = System.Drawing.Color.Khaki;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ConsultarDonaciones";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ConsultarDonaciones";
             this.Load += new System.EventHandler(this.ConsultarDonaciones_Load);
             this.panel.ResumeLayout(false);

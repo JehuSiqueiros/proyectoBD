@@ -45,7 +45,7 @@ namespace ProyectoKBI
                 {
                     clsVoluntarios objVoluntarios = new clsVoluntarios();
                     objVoluntarios.Eliminar(Convert.ToInt32(cbIDvoluntarios.SelectedItem.ToString()));
-                    dgvVoluntarios.Rows.Clear();
+                    lblApellidoM.Text = lblApellidoP.Text = lblHorario.Text = lblNombre.Text = lblTel.Text = string.Empty;
                     lblResult.Text += " Eliminados";
                 }
             }
@@ -57,13 +57,36 @@ namespace ProyectoKBI
 
         private void cbIDvoluntarios_SelectionChangeCommitted(object sender, EventArgs e)
         {
-            dgvVoluntarios.Rows.Clear();
             clsVoluntarios objVoluntarios = new clsVoluntarios();
-            ArrayList lista = objVoluntarios.ConsultarPorID(Convert.ToInt32(cbIDvoluntarios.SelectedItem.ToString()));
-            foreach (clsVoluntarios.dato dato in lista)
-            {
-                dgvVoluntarios.Rows.Add(dato.idVoluntario, dato.Nombres, dato.ApellidoP, dato.ApellidoM,dato.idHorario, dato.Telefono);
-            }
+            var voluntario = objVoluntarios.ConsultarPorID(Convert.ToInt32(cbIDvoluntarios.SelectedItem.ToString()));
+
+            lblApellidoM.Text = voluntario.ApellidoM;
+            lblApellidoP.Text = voluntario.ApellidoP;
+            lblHorario.Text = voluntario.Horario;
+            lblTel.Text = voluntario.Telefono;
+            lblNombre.Text = voluntario.Nombres;
+        }
+
+        private void panel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnClose_MouseHover(object sender, EventArgs e)
+        {
+            Cursor = Cursors.Hand;
+            btnClose.BackgroundImage = Properties.Resources.closeHover;
+        }
+
+        private void btnClose_MouseLeave(object sender, EventArgs e)
+        {
+            Cursor = Cursors.Default;
+            btnClose.BackgroundImage = Properties.Resources.close1;
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
